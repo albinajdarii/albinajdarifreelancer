@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol // Albin Ajdari</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Reusing Tokens */
+        :root { --bg: #0b0c0e; --bg2: #111316; --green: #00ff41; --border: rgba(255,255,255,.07); --font-mono: 'JetBrains Mono', monospace; }
+        body { background: var(--bg); color: #f0f2f5; font-family: 'Syne', sans-serif; padding: 48px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        
+        .step { position: relative; padding-left: 60px; margin-bottom: 80px; border-left: 1px solid var(--border); }
+        .step-num { position: absolute; left: -15px; top: 0; width: 30px; height: 30px; background: var(--bg); border: 1px solid var(--green); color: var(--green); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 12px; }
+        .step-title { font-size: 32px; font-weight: 700; margin-bottom: 16px; }
+        .step-desc { font-family: var(--font-mono); color: #8a8f9a; font-size: 14px; max-width: 600px; line-height: 1.6; }
+        
+        .code-snippet { background: #000; border: 1px solid var(--border); padding: 20px; font-family: var(--font-mono); font-size: 12px; color: #4eef6d; margin-top: 24px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="font-size: 48px; margin-bottom: 64px;">Deployment_Protocol.sh</h1>
+
+        <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-title">Threat Assessment</div>
+            <div class="step-desc">Before a single line of code is written, I perform a vulnerability audit. This includes scanning for OWASP Top 10 risks and analyzing the infrastructure requirements.</div>
+            <div class="code-snippet">> nmap -sV --script vuln [client_domain]</div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-title">Architecture & Hardening</div>
+            <div class="step-desc">I build the application on a secure foundation, typically utilizing Linux VPS (Ubuntu/Debian) with custom Nginx configurations and strict firewall rules.</div>
+            <div class="code-snippet">> ufw allow 80/tcp && ufw allow 443/tcp</div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-title">Performance & SEO Optimization</div>
+            <div class="step-desc">Clean design meets speed. Every project undergoes Core Web Vitals optimization and SEO hardening to ensure visibility matches security.</div>
+        </div>
+
+        <a href="index.html" style="color:var(--green); text-decoration:none; font-family:var(--font-mono); font-size:12px;">[ EXIT_PROCESS ]</a>
+    </div>
+</body>
+</html>
